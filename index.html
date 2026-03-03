@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PassportFast – Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --ink: #1A2B45;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #F8F5EE;
+      --white: #FFFFFF;
+      --muted: #6B7A90;
+      --border: #DDD8CE;
+      --green: #2E7D5E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 32px 52px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .badge::before {
+      content: '🔒';
+      font-size: 14px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    header h1 span {
+      color: var(--gold);
+    }
+
+    .header-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .updated-tag {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── HERO PROMISE ── */
+    .hero-promise {
+      background: var(--green);
+      padding: 24px 32px;
+    }
+
+    .hero-promise-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .promise-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .hero-promise p {
+      color: rgba(255,255,255,0.92);
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .hero-promise strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    /* ── ZERO DATA CARD ── */
+    .zero-card {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .zero-card::after {
+      content: '0';
+      position: absolute;
+      right: -10px;
+      top: -20px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 180px;
+      color: rgba(201,168,76,0.06);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .zero-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .zero-card p {
+      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      max-width: 560px;
+    }
+
+    .zero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .zero-stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .zero-stat .label {
+      display: block;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .zero-stat .value {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 44px;
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-num {
+      width: 28px;
+      height: 28px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      color: var(--navy);
+    }
+
+    .section p {
+      color: #3D4F63;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    /* ── PERMISSION CARDS ── */
+    .permission-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .perm-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--navy);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .perm-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .perm-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── GUARANTEE LIST ── */
+    .guarantee-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .guarantee-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: #3D4F63;
+    }
+
+    .guarantee-list li::before {
+      content: '✓';
+      width: 22px;
+      height: 22px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .contact-box h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .contact-box a {
+      color: var(--navy);
+      font-size: 14px;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .contact-box a:hover {
+      color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 28px 32px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    @media (max-width: 520px) {
+      .header-inner { padding: 40px 20px 36px; }
+      main { padding: 40px 20px 60px; }
+      .hero-promise { padding: 20px; }
+      .zero-card { padding: 24px 20px; }
+      .zero-card::after { font-size: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="badge">Privacy First</div>
+      <h1>PassportFast <span>⚡</span><br/>Privacy Policy</h1>
+      <p class="header-sub">Simple, honest, and complete — because your privacy matters.</p>
+      <span class="updated-tag">Last Updated: June 2025</span>
+    </div>
+  </header>
+
+  <div class="hero-promise">
+    <div class="hero-promise-inner">
+      <span class="promise-icon">🛡️</span>
+      <p><strong>The short version:</strong> PassportFast collects absolutely nothing. No data, no analytics, no tracking — ever. All photo processing happens entirely on your device.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="zero-card">
+      <h2>Zero Data Collection</h2>
+      <p>PassportFast was built with a privacy-first architecture. We have no servers, no databases, and no way to access your information — because we never designed one.</p>
+      <div class="zero-stats">
+        <div class="zero-stat">
+          <span class="label">Data Collected</span>
+          <span class="value">None</span>
+        </div>
+        <div class="zero-stat">
+          <span class="label">Servers Used</span>
+          <span class="value">None</span>
+        </div>
+        <div class="zero-stat">
+          <span class="label">3rd Party SDKs</span>
+          <span class="value">None</span>
+        </div>
+        <div class="zero-stat">
+          <span class="label">Ads or Tracking</span>
+          <span class="value">None</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">1</div>
+        <h2>What Data We Collect</h2>
+      </div>
+      <p><strong>Nothing.</strong> PassportFast collects no personal data, no photos, no usage statistics, no device identifiers, and no analytics of any kind. We have no mechanism to do so and no desire to.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">2</div>
+        <h2>How Your Photos Are Processed</h2>
+      </div>
+      <p>All photo processing is performed entirely on your iPhone or iPad using Apple's built-in frameworks:</p>
+      <ul class="guarantee-list">
+        <li>Face detection uses Apple's <strong>Vision framework</strong> — runs locally, on-device.</li>
+        <li>Background removal uses Apple's <strong>Core Image framework</strong> — runs locally, on-device.</li>
+        <li>Your photos <strong>never leave your device.</strong></li>
+        <li>No internet connection is required or used for any processing.</li>
+        <li>Photos you process are saved only to <strong>your own Photos Library</strong> — under your full control.</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">3</div>
+        <h2>Device Permissions We Request</h2>
+      </div>
+      <p>PassportFast requests the following permissions, used only for stated app functionality:</p>
+      <div class="permission-grid">
+        <div class="perm-card">
+          <h3>📷 Camera Access</h3>
+          <p>Used to capture a passport or visa photo directly within the app using your front camera. We never access the camera in the background or without your explicit action.</p>
+        </div>
+        <div class="perm-card">
+          <h3>🖼️ Photo Library (Read)</h3>
+          <p>Used to let you select an existing photo from your library as the source image for your passport photo. We access only the photo you explicitly choose.</p>
+        </div>
+        <div class="perm-card">
+          <h3>💾 Photo Library (Write)</h3>
+          <p>Used to save your completed, processed passport photo back to your Photos Library for printing and sharing. Nothing is saved without your explicit tap.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">4</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>PassportFast integrates <strong>no third-party services</strong> of any kind. There are:</p>
+      <ul class="guarantee-list">
+        <li>No advertising SDKs</li>
+        <li>No analytics platforms (no Firebase, Mixpanel, Amplitude, etc.)</li>
+        <li>No crash reporting services</li>
+        <li>No social media integrations</li>
+        <li>No payment processors (the app is free / paid via App Store)</li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">5</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>PassportFast does not collect any information from anyone, including children under 13. Since no data collection occurs, the app is inherently compliant with COPPA and similar regulations.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">6</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>If we ever update this privacy policy (for example, when adding new features), we will update the "Last Updated" date at the top of this page. Since we collect no data, any changes would only ever expand your privacy protections, never reduce them.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">7</div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>Have a question about this privacy policy? We're happy to answer.</p>
+      <div class="contact-box">
+        <span class="contact-icon">✉️</span>
+        <div>
+          <h3>PassportFast Support</h3>
+          <a href="mailto:your@email.com">your@email.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 <strong>PassportFast</strong> · All processing is on-device · No data ever leaves your iPhone</p>
+  </footer>
+
+</body>
+</html>
