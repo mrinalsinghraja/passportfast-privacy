@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PassportFast — MSRX</title>
-  <meta name="description" content="AI Passport & Visa Photos for iOS. Compliant photos from your iPhone in seconds.">
+  <title>MSRX PassportFast — passport photos, measured</title>
+  <meta name="description" content="Passport and visa photos measured against head height and eye line, not just resized. Twelve formats, each with the authority it came from and the date it was read.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,24 +22,28 @@
     .nav-links a { font-size: 14px; color: var(--text2); text-decoration: none; transition: color 0.15s; }
     .nav-links a:hover { color: var(--text); }
     .hero { max-width: 1100px; margin: 0 auto; padding: 80px 24px 60px; text-align: center; }
-    .app-icon { width: 120px; height: 120px; border-radius: 28px; box-shadow: 0 8px 40px rgba(0,0,0,0.12); margin: 0 auto 32px; background: linear-gradient(135deg, #00c4df 0%, #8b5cf6 100%); display: flex; align-items: center; justify-content: center; }
+    .app-icon { width: 120px; height: 120px; border-radius: 28px; box-shadow: 0 8px 40px rgba(0,0,0,0.12); margin: 0 auto 32px; background: var(--gradient); display: flex; align-items: center; justify-content: center; }
     .app-icon-initials { font-size: 42px; font-weight: 800; color: white; letter-spacing: -2px; }
     .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text3); margin-bottom: 16px; }
-    .hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; color: var(--text); margin-bottom: 16px; }
-    .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero p { font-size: 18px; color: var(--text2); max-width: 520px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    /* The brand gradient runs to cyan, which measures 1.6:1 on white.
+       It is a rule and a fill here, never the colour of a word. */
+    .hero .rule { width: 72px; height: 4px; border-radius: 2px; background: var(--gradient); margin: 0 auto 20px; }
+    .hero p { font-size: 18px; color: var(--text2); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
     .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 14px; background: var(--gradient); color: white; font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.15s; box-shadow: 0 4px 20px rgba(0,196,223,0.3); }
-    .btn-primary:hover { opacity: 0.88; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 14px; background: var(--text); color: white; font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.15s; }
+    .btn-primary:hover { opacity: 0.86; }
     .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 14px; background: var(--surface); color: var(--text); font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--border); transition: all 0.15s; }
     .btn-secondary:hover { background: #ebebed; }
     .features { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
     .section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text3); text-align: center; margin-bottom: 48px; }
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .feature-card { background: var(--surface); border-radius: 20px; padding: 28px; border: 1px solid var(--border); }
-    .feature-icon { font-size: 28px; margin-bottom: 12px; }
     .feature-card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
     .feature-card p { font-size: 14px; color: var(--text2); line-height: 1.6; }
+    .feature-card .num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--text3); display: block; margin-bottom: 14px; }
+    .note { max-width: 720px; margin: 0 auto; padding: 8px 24px 60px; }
+    .note p { font-size: 14px; color: var(--text2); line-height: 1.7; }
     .divider { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
     .divider hr { border: none; border-top: 1px solid var(--border); }
     footer { max-width: 1100px; margin: 0 auto; padding: 32px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -69,30 +73,60 @@
   </nav>
   <section class="hero">
     <div class="app-icon"><span class="app-icon-initials">PF</span></div>
-    <p class="eyebrow">iOS · MSRX</p>
-    <h1>PassportFast<br><span>AI Photo Studio</span></h1>
-    <p>Generate government-compliant passport and visa photos from your iPhone in seconds. No studio required — just your phone and perfect lighting.</p>
+    <p class="eyebrow">iOS &amp; iPadOS &middot; MSRX</p>
+    <h1>Passport photos,<br>measured.</h1>
+    <div class="rule"></div>
+    <p>A passport photo is not defined by its outer dimensions. It is defined by how much of the frame your head fills and where your eyes sit. That is why a photo can be exactly 413 &times; 531 pixels and still be refused.</p>
     <div class="cta-row">
       <a href="https://apps.apple.com/us/app/passportfast/id6759985939" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Download on the App Store
       </a>
-      <a href="https://msrx.co.in" class="btn-secondary">More MSRX Apps →</a>
+      <a href="https://msrx.co.in" class="btn-secondary">More MSRX apps &rarr;</a>
     </div>
   </section>
   <div class="divider"><hr></div>
   <section class="features">
-    <p class="section-title">Key Features</p>
+    <p class="section-title">What it does</p>
     <div class="features-grid">
-      <div class="feature-card"><div class="feature-icon">📸</div><h3>AI Photo Capture</h3><p>AI guides you to the perfect shot — correct framing, lighting, and expression — every single time.</p></div>
-      <div class="feature-card"><div class="feature-icon">🌍</div><h3>Global Standards</h3><p>Supports passport and visa photo requirements for 100+ countries, always up to date.</p></div>
-      <div class="feature-card"><div class="feature-icon">✏️</div><h3>Background Removal</h3><p>Automatically replaces backgrounds with the correct solid color required by each country's specifications.</p></div>
-      <div class="feature-card"><div class="feature-icon">📲</div><h3>Print & Digital Ready</h3><p>Export in the exact dimensions for printing or digital submission — no cropping or resizing needed.</p></div>
+      <div class="feature-card">
+        <span class="num">01</span>
+        <h3>Measured, not resized</h3>
+        <p>Your chin and eye line are found, and the top of your head is measured rather than estimated, so hair is not cropped off. The crop is solved so your head lands inside the range your format publishes.</p>
+      </div>
+      <div class="feature-card">
+        <span class="num">02</span>
+        <h3>A guide that means something</h3>
+        <p>The outline you frame yourself in is drawn to your format's own head-height range. It turns green only when the photo it would produce actually meets the rule, not when a face is merely inside a circle.</p>
+      </div>
+      <div class="feature-card">
+        <span class="num">03</span>
+        <h3>Twelve formats, each sourced</h3>
+        <p>Every format names the authority its figures came from and the date they were read. Where an authority publishes a size but no head-height range, the app says so instead of inventing one.</p>
+      </div>
+      <div class="feature-card">
+        <span class="num">04</span>
+        <h3>It tells you when it cannot help</h3>
+        <p>Some authorities refuse any edited photo, and some take the photograph themselves. Where that is true, the app says so before you spend any effort rather than selling you a file you cannot submit.</p>
+      </div>
+      <div class="feature-card">
+        <span class="num">05</span>
+        <h3>Print and submit</h3>
+        <p>Print sheets on 4&times;6, 5&times;7, A4 and US Letter with real gutters and crop marks that miss your face. PDF export at true physical size, so a print shop cannot rescale it.</p>
+      </div>
+      <div class="feature-card">
+        <span class="num">06</span>
+        <h3>Private by construction</h3>
+        <p>Every photo is processed on your device. Nothing is uploaded, there is no account, and no data is collected. The app works with no network at all.</p>
+      </div>
     </div>
   </section>
+  <div class="note">
+    <p>Final acceptance of any photo is always the issuing authority's decision. This app measures your photo against the rule an authority publishes and shows you the result; it does not and cannot guarantee that an application will be accepted.</p>
+  </div>
   <div class="divider"><hr></div>
   <footer>
-    <p class="footer-left">© 2025 MSRX. All rights reserved.</p>
+    <p class="footer-left">&copy; 2026 MSRX. All rights reserved.</p>
     <div class="footer-right">
       <a href="privacy.html">Privacy Policy</a>
       <a href="mailto:mrinalsinghraja@gmail.com">Contact</a>
